@@ -15,9 +15,9 @@ const initialProfile = {
   resume: "Resume.pdf",
   experience: {
     role: "Research Assistant",
-    company: "Indian Institute of Science",
+    company: "Indian Institute of Technology",
     duration: "May 2024 to Aug 2024 - 4 months",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/9/9e/DJSCE_Logo.png", // Replace with a generic logo if needed
+    logo: "https://upload.wikimedia.org/wikipedia/en/thumb/1/1d/Indian_Institute_of_Technology_Bombay_Logo.svg/1200px-Indian_Institute_of_Technology_Bombay_Logo.svg.png",
     skills: ["Data Collection", "Statistical Analysis", "R"],
   },
   education: {
@@ -146,4 +146,5 @@ export default function ProfilePage() {
       />
     </>
   );
+
 }
