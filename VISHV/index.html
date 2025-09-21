@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PM Internship Recommendation Engine - Government of India</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Landing Page -->
+    <section id="landing" class="screen active">
+        <div class="container">
+            <div class="hero">
+                <div class="language-selector">
+                    <select id="languageSelect" class="form-control">
+                        <option value="en">English</option>
+                        <option value="hi">हिंदी</option>
+                        <option value="bn">বাংলা</option>
+                        <option value="ta">தமிழ்</option>
+                        <option value="te">తెలుగు</option>
+                        <option value="mr">मराठी</option>
+                        <option value="gu">ગુજરાતી</option>
+                        <option value="pa">ਪੰਜਾਬੀ</option>
+                    </select>
+                </div>
+                
+                <div class="government-badge">
+                    <i class="fas fa-certificate"></i>
+                    <span>Government of India Initiative</span>
+                </div>
+                
+                <h1 class="hero-title">PM Internship Recommendation Engine</h1>
+                <p class="hero-tagline">Smart India Hackathon 2025 - Problem Statement 25033</p>
+                
+                <div class="hero-description">
+                    <p>Advanced AI-powered platform connecting candidates with <strong>PM Internship Scheme opportunities</strong> across India's leading 500 organizations.</p>
+                    <p>Leverage artificial intelligence to identify optimal career pathways based on professional experience and competency assessment.</p>
+                </div>
+                
+                <div class="pm-stats">
+                    <div class="stat">
+                        <div class="stat-number">1+ Crore</div>
+                        <div class="stat-label">Internship Positions</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Partner Organizations</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">₹5,000</div>
+                        <div class="stat-label">Monthly Stipend</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">24</div>
+                        <div class="stat-label">Industry Sectors</div>
+                    </div>
+                </div>
+                
+                <div class="hero-features">
+                    <div class="feature">
+                        <i class="fas fa-microphone-alt"></i>
+                        <span>Voice-Enabled Interface</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-brain"></i>
+                        <span>AI-Powered Analysis</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-building"></i>
+                        <span>Enterprise Integration</span>
+                    </div>
+                </div>
+                
+                <button class="btn btn--primary btn--lg hero-cta" id="findInternshipBtn">
+                    <i class="fas fa-arrow-right"></i>
+                    Access PM Internship Portal
+                </button>
+                
+                <div class="official-integration">
+                    <p><i class="fas fa-link"></i> Direct integration with Official PM Internship Portal</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story Input -->
+    <section id="storyInput" class="screen">
+        <div class="container">
+            <div class="story-input">
+                <button class="btn btn--outline back-btn" id="backToLandingBtn">
+                    <i class="fas fa-arrow-left"></i>
+                    Return to Portal
+                </button>
+                
+                <h2>Professional Experience Assessment</h2>
+                <p class="subtitle">Share your professional background and experiences for intelligent career pathway analysis</p>
+                
+                <div class="hero-message">
+                    <div class="hero-box hope">
+                        <i class="fas fa-lightbulb"></i>
+                        <p>Your professional experiences have equipped you with valuable competencies sought by leading organizations.</p>
+                    </div>
+                </div>
+                
+                <div class="voice-input-section">
+                    <button class="voice-button" id="voiceButton">
+                        <i class="fas fa-microphone"></i>
+                        <span class="voice-text">Voice Input Available</span>
+                    </button>
+                    <p class="voice-hint">Use voice input or text entry to document your professional experiences</p>
+                </div>
+                
+                <div class="text-input-section">
+                    <textarea 
+                        id="storyText" 
+                        class="form-control story-textarea" 
+                        placeholder="Please document your professional experiences, including academic projects, work responsibilities, community involvement, leadership activities, technical skills application, problem-solving instances, and collaborative achievements. Focus on specific experiences and accomplishments rather than preferences."
+                        rows="6"
+                    ></textarea>
+                    <div class="input-info">
+                        <span id="charCount" class="char-count">0 characters</span>
+                        <div class="story-prompts">
+                            <small>Professional Assessment: Document concrete experiences and demonstrated competencies</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="sample-stories">
+                    <h3>Professional Experience Examples:</h3>
+                    <div class="sample-story-cards">
+                        <div class="sample-story-card" id="sampleStory1">
+                            <i class="fas fa-laptop-code"></i>
+                            <p>Technology Implementation</p>
+                        </div>
+                        <div class="sample-story-card" id="sampleStory2">
+                            <i class="fas fa-users-cog"></i>
+                            <p>Leadership & Project Management</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="btn btn--primary btn--lg btn--full-width" id="analyzeStoryBtn" disabled>
+                    <i class="fas fa-analytics"></i>
+                    Generate Internship Recommendations
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Processing Screen -->
+    <section id="processing" class="screen">
+        <div class="container">
+            <div class="processing-content">
+                <div class="processing-animation">
+                    <div class="loader"></div>
+                </div>
+                
+                <h2 id="processingTitle">Analyzing Professional Profile Using Advanced NLP</h2>
+                <p id="processingSubtitle">Processing competencies and generating targeted recommendations</p>
+                
+                <div class="hero-processing-message">
+                    <div class="hero-box efficacy">
+                        <i class="fas fa-certificate"></i>
+                        <p id="heroMessage">Your demonstrated capabilities align with industry requirements for internship positions.</p>
+                    </div>
+                </div>
+                
+                <div class="processing-steps">
+                    <div class="step active" id="step1">
+                        <i class="fas fa-file-text"></i>
+                        <span>Analyzing professional narrative using Advanced NLP</span>
+                    </div>
+                    <div class="step" id="step2">
+                        <i class="fas fa-cogs"></i>
+                        <span>Extracting core competencies and skill sets</span>
+                    </div>
+                    <div class="step" id="step3">
+                        <i class="fas fa-building"></i>
+                        <span>Matching with PM Internship opportunities</span>
+                    </div>
+                    <div class="step" id="step4">
+                        <i class="fas fa-user-tie"></i>
+                        <span>Generating personalized career recommendations</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Dashboard -->
+    <section id="results" class="screen">
+        <div class="container">
+            <div class="results-header">
+                <button class="btn btn--outline back-btn" id="backToStoryBtn">
+                    <i class="fas fa-arrow-left"></i>
+                    Modify Assessment
+                </button>
+                <h2>Professional Internship Recommendations</h2>
+                <p class="subtitle">Customized recommendations based on competency analysis and career alignment</p>
+                
+                <div class="hero-message">
+                    <div class="hero-box optimism">
+                        <i class="fas fa-award"></i>
+                        <p>Exceptional opportunities await candidates with your professional background and capabilities.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="results-content">
+                <!-- Identified Skills -->
+                <div class="section skills-section">
+                    <h3><i class="fas fa-clipboard-check"></i> Identified Core Competencies</h3>
+                    <div id="identifiedSkills" class="skills-grid">
+                        <!-- Skills will be populated by JavaScript -->
+                    </div>
+                </div>
+                
+                <!-- PM Internship Recommendations -->
+                <div class="section careers-section">
+                    <h3><i class="fas fa-briefcase"></i> PM Internship Opportunities</h3>
+                    <div id="internshipPaths" class="career-cards">
+                        <!-- Internship opportunities will be populated by JavaScript -->
+                    </div>
+                </div>
+                
+                <!-- PM Internship Scheme Details -->
+                <div class="section training-section">
+                    <h3><i class="fas fa-university"></i> Program Benefits & Support</h3>
+                    <div id="pmSchemeDetails" class="training-cards">
+                        <!-- PM scheme details will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Internship Detail Modal -->
+    <div id="internshipModal" class="modal hidden">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModalBtn">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <div id="internshipDetailContent">
+                <!-- Content will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Profile Section -->
+    <section id="profile" class="screen">
+        <div class="container">
+            <div class="profile-content">
+                <button class="btn btn--outline back-btn" id="backToResultsBtn">
+                    <i class="fas fa-arrow-left"></i>
+                    Return to Recommendations
+                </button>
+                
+                <h2>Professional Profile Dashboard</h2>
+                
+                <div class="profile-sections">
+                    <div class="profile-section">
+                        <h3><i class="fas fa-user-circle"></i> Professional Summary</h3>
+                        <div class="story-summary" id="storySummary">
+                            <!-- Will be populated by JavaScript -->
+                        </div>
+                    </div>
+                    
+                    <div class="profile-section">
+                        <h3><i class="fas fa-tasks"></i> Competency Assessment</h3>
+                        <div id="skillsInventory" class="skills-inventory">
+                            <!-- Will be populated by JavaScript -->
+                        </div>
+                    </div>
+                    
+                    <div class="profile-section">
+                        <h3><i class="fas fa-bookmark"></i> Saved Opportunities</h3>
+                        <div id="savedOpportunities" class="saved-opportunities">
+                            <p class="empty-state">No saved opportunities. Return to recommendations to bookmark positions of interest.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="profile-section">
+                        <h3><i class="fas fa-chart-line"></i> Application Status Tracking</h3>
+                        <div id="applicationStatus" class="application-status">
+                            <p class="empty-state">No applications submitted. Click "Apply via Official Portal" to initiate the application process.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Navigation -->
+    <nav class="bottom-nav" id="bottomNav" style="display: none;">
+        <button class="nav-item active" id="navResults">
+            <i class="fas fa-briefcase"></i>
+            <span>Opportunities</span>
+        </button>
+        <button class="nav-item" id="navProfile">
+            <i class="fas fa-user-tie"></i>
+            <span>Profile</span>
+        </button>
+        <button class="nav-item" id="navNewSearch">
+            <i class="fas fa-plus-circle"></i>
+            <span>New Assessment</span>
+        </button>
+    </nav>
+
+    <script src="app.js"></script>
+</body>
+</html>
