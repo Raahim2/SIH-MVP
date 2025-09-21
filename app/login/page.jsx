@@ -28,8 +28,8 @@ export default function LoginPage() {
     <div className="flex min-h-screen flex-col items-center justify-center bg-gray-100">
       <div className="w-full max-w-md p-8 space-y-6 bg-white rounded-xl shadow-lg">
         <div className="flex flex-col items-center">
-          <Image 
-            src="/emblem.png"
+           <img 
+            src="https://www.logopeople.in/wp-content/uploads/2013/01/government-of-india.jpg" // Make sure emblem.png is in your public folder
             alt="Government of India Emblem"
             width={60}
             height={60}
@@ -101,4 +101,5 @@ export default function LoginPage() {
       </div>
     </div>
   );
+
 }
