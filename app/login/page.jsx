@@ -92,10 +92,8 @@ export default function LoginPage() {
         </form>
         <p className="text-sm text-center text-gray-600">
           Don't have an account?{' '}
-          <Link href="/signup" legacyBehavior>
-            <a className="font-medium text-indigo-600 hover:text-indigo-500">
-              Sign up
-            </a>
+          <Link href="/signup" className="font-medium text-indigo-600 hover:text-indigo-500">
+            Sign up
           </Link>
         </p>
       </div>
