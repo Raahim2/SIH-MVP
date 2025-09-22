@@ -31,13 +31,13 @@ export default function Home() {
             <span className="text-xl font-bold text-gray-900">PM Internship Engine</span>
           </div>
           <div className="space-x-4">
-            <Link href="/login" legacyBehavior>
-              <a className="text-gray-600 hover:text-indigo-600 font-medium">Login</a>
+            <Link href="/login" className="text-gray-600 hover:text-indigo-600 font-medium">
+              Login
             </Link>
-            <Link href="/signup" legacyBehavior>
-              <a className="bg-indigo-600 text-white px-4 py-2 rounded-md font-semibold hover:bg-indigo-700 transition-colors">
-                Sign Up
-              </a>
+            <Link 
+              href="/signup" className="bg-indigo-600 text-white px-4 py-2 rounded-md font-semibold hover:bg-indigo-700 transition-colors"
+            >
+              Sign Up
             </Link>
           </div>
         </nav>
@@ -55,16 +55,18 @@ export default function Home() {
               The Prime Minister's Internship Recommendation Engine connects aspiring students with meaningful internship opportunities across various Government of India ministries.
             </p>
             <div className="mt-10 flex justify-center gap-4">
-                <Link href="/signup" legacyBehavior>
-                  <a className="px-8 py-3 text-lg font-medium text-white bg-indigo-600 border border-transparent rounded-md hover:bg-indigo-700 shadow-lg transform hover:scale-105 transition-transform">
-                    Find an Internship
-                  </a>
-                </Link>
-                <Link href="/login" legacyBehavior>
-                  <a className="px-8 py-3 text-lg font-medium text-indigo-600 bg-white border border-gray-200 rounded-md hover:bg-gray-100 shadow-lg transform hover:scale-105 transition-transform">
-                    Login
-                  </a>
-                </Link>
+              <Link 
+                href="/signup" 
+                className="px-8 py-3 text-lg font-medium text-white bg-indigo-600 border border-transparent rounded-md hover:bg-indigo-700 shadow-lg transform hover:scale-105 transition-transform"
+              >
+                Find an Internship
+              </Link>
+              <Link 
+                href="/login" 
+                className="px-8 py-3 text-lg font-medium text-indigo-600 bg-white border border-gray-200 rounded-md hover:bg-gray-100 shadow-lg transform hover:scale-105 transition-transform"
+              >
+                Login
+              </Link>
             </div>
           </div>
         </section>
@@ -160,10 +162,11 @@ export default function Home() {
               <span className="block text-indigo-600 mt-2">Join the Platform Today.</span>
             </h2>
             <div className="mt-8">
-              <Link href="/signup" legacyBehavior>
-                <a className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-indigo-600 border border-transparent rounded-md hover:bg-indigo-700 shadow-xl">
-                  Sign Up Now
-                </a>
+              <Link 
+                href="/signup" 
+                className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-indigo-600 border border-transparent rounded-md hover:bg-indigo-700 shadow-xl"
+              >
+                Sign Up Now
               </Link>
             </div>
           </div>

@@ -81,11 +81,9 @@ export default function SignupPage() {
         </form>
         <p className="text-sm text-center text-gray-600">
           Already have an account?{' '}
-          <Link href="/login" legacyBehavior>
-            <a className="font-medium text-indigo-600 hover:text-indigo-500">
-              Login
-            </a>
-          </Link>
+        <Link href="/login" className="font-medium text-indigo-600 hover:text-indigo-500">
+          Login
+        </Link>
         </p>
       </div>
     </div>
